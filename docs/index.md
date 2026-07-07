@@ -5,6 +5,8 @@ network-accessible serial console server, running
 [ConsolePi](https://github.com/Pack3tL0ss/ConsolePi) on Raspberry Pi OS 13
 (Trixie).
 
+![ConsolePi + Cisco 1210CE topology](assets/topology.svg){ .off-glb }
+
 ## What you'll end up with
 
 A quiet, low-power box that:

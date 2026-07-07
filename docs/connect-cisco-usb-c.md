@@ -7,6 +7,12 @@ strictly easier than RJ45 for one reason: **the target device itself
 acts as the USB-serial converter**, so you don't need an FTDI or
 Prolific chip in the cable.
 
+![ConsolePi + Cisco 1210CE topology](assets/topology.svg){ .off-glb }
+
+*Amber path = the USB console cable. Both devices are also attached to
+the LAN via Ethernet, but the console data flows over the USB link, not
+over the network.*
+
 ## What you need
 
 - Any **USB-A to USB-C data cable** — the kind you'd use to charge a
