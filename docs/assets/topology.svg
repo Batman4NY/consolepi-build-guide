@@ -2,108 +2,130 @@
 
   <title>ConsolePi + Cisco 1210CE topology</title>
 
+  <style>
+    /* Light mode (default) */
+    .ink       { stroke: #1a1a1a; fill: none; }
+    .ink-text  { fill: #1a1a1a; }
+    .mid-text  { fill: #4a4a4a; }
+    .dim-text  { fill: #6a6a6a; }
+    .port      { fill: #c8c8c8; }
+    .amber     { stroke: #d97706; }
+    .amber-fill{ fill: #d97706; }
+
+    /* Dark mode */
+    @media (prefers-color-scheme: dark) {
+      .ink       { stroke: #e8e8e8; }
+      .ink-text  { fill: #e8e8e8; }
+      .mid-text  { fill: #b8b8b8; }
+      .dim-text  { fill: #9a9a9a; }
+      .port      { fill: #4a4a4a; }
+      .amber     { stroke: #ffb400; }
+      .amber-fill{ fill: #ffb400; }
+    }
+  </style>
+
   <!-- ===== Workstation ===== -->
   <g transform="translate(370 30)">
-    <rect x="0" y="0" width="160" height="60" rx="10" fill="none" stroke="currentColor" stroke-width="2"/>
-    <text x="80" y="26" text-anchor="middle" font-size="14" font-weight="700" fill="currentColor">Workstation</text>
-    <text x="80" y="46" text-anchor="middle" font-size="11" fill="currentColor" opacity="0.7">SSH / telnet client</text>
+    <rect x="0" y="0" width="160" height="60" rx="10" class="ink" stroke-width="2"/>
+    <text x="80" y="26" text-anchor="middle" font-size="14" font-weight="700" class="ink-text">Workstation</text>
+    <text x="80" y="46" text-anchor="middle" font-size="11" class="dim-text">SSH / telnet client</text>
   </g>
 
   <!-- Ethernet from Workstation to LAN -->
-  <line x1="450" y1="90" x2="450" y2="140" stroke="currentColor" stroke-width="2"/>
-  <text x="460" y="118" font-size="11" fill="currentColor" opacity="0.75">Ethernet</text>
+  <line x1="450" y1="90" x2="450" y2="140" class="ink" stroke-width="2"/>
+  <text x="460" y="118" font-size="11" class="mid-text">Ethernet</text>
 
   <!-- ===== LAN Switch ===== -->
   <g transform="translate(150 140)">
-    <rect x="0" y="0" width="600" height="56" rx="8" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="5 3"/>
-    <text x="300" y="24" text-anchor="middle" font-size="14" font-weight="700" fill="currentColor">LAN switch</text>
-    <text x="300" y="42" text-anchor="middle" font-size="11" fill="currentColor" opacity="0.7">192.168.1.0/24</text>
+    <rect x="0" y="0" width="600" height="56" rx="8" class="ink" stroke-width="2" stroke-dasharray="5 3"/>
+    <text x="300" y="24" text-anchor="middle" font-size="14" font-weight="700" class="ink-text">LAN switch</text>
+    <text x="300" y="42" text-anchor="middle" font-size="11" class="dim-text">192.168.1.0/24</text>
   </g>
 
   <!-- Ethernet down to Pi -->
-  <line x1="280" y1="196" x2="280" y2="270" stroke="currentColor" stroke-width="2"/>
-  <text x="200" y="240" font-size="11" fill="currentColor" opacity="0.75">Ethernet</text>
+  <line x1="280" y1="196" x2="280" y2="270" class="ink" stroke-width="2"/>
+  <text x="200" y="240" font-size="11" class="mid-text">Ethernet</text>
 
   <!-- Ethernet down to 1210 (outside interface) -->
-  <line x1="620" y1="196" x2="620" y2="270" stroke="currentColor" stroke-width="2"/>
-  <text x="540" y="240" font-size="11" fill="currentColor" opacity="0.75">Ethernet (Outside)</text>
+  <line x1="620" y1="196" x2="620" y2="270" class="ink" stroke-width="2"/>
+  <text x="540" y="240" font-size="11" class="mid-text">Ethernet (Outside)</text>
 
   <!-- ===== Raspberry Pi (ConsolePi) ===== -->
   <g transform="translate(140 270)">
-    <rect x="0" y="0" width="280" height="150" rx="10" fill="none" stroke="currentColor" stroke-width="2"/>
-    <text x="140" y="30" text-anchor="middle" font-size="15" font-weight="700" fill="currentColor">Raspberry Pi 3B+</text>
-    <text x="140" y="50" text-anchor="middle" font-size="12" fill="currentColor" opacity="0.75">ConsolePi</text>
-    <text x="140" y="68" text-anchor="middle" font-size="11" fill="currentColor" opacity="0.6">consolepi.local  ·  ser2net :9000</text>
+    <rect x="0" y="0" width="280" height="150" rx="10" class="ink" stroke-width="2"/>
+    <text x="140" y="30" text-anchor="middle" font-size="15" font-weight="700" class="ink-text">Raspberry Pi 3B+</text>
+    <text x="140" y="50" text-anchor="middle" font-size="12" class="mid-text">ConsolePi</text>
+    <text x="140" y="68" text-anchor="middle" font-size="11" class="dim-text">consolepi.local  ·  ser2net :9000</text>
 
     <!-- Port row -->
     <g transform="translate(30 100)">
       <!-- eth0 -->
-      <rect x="0" y="0" width="34" height="16" rx="2" fill="currentColor" opacity="0.25"/>
-      <text x="17" y="30" text-anchor="middle" font-size="10" fill="currentColor">eth0</text>
+      <rect x="0" y="0" width="34" height="16" rx="2" class="port"/>
+      <text x="17" y="30" text-anchor="middle" font-size="10" class="mid-text">eth0</text>
 
       <!-- USB-A (regular) -->
-      <rect x="55" y="0" width="30" height="16" rx="2" fill="currentColor" opacity="0.25"/>
-      <text x="70" y="30" text-anchor="middle" font-size="10" fill="currentColor">USB-A</text>
+      <rect x="55" y="0" width="30" height="16" rx="2" class="port"/>
+      <text x="70" y="30" text-anchor="middle" font-size="10" class="mid-text">USB-A</text>
 
       <!-- USB-A (regular) -->
-      <rect x="100" y="0" width="30" height="16" rx="2" fill="currentColor" opacity="0.25"/>
-      <text x="115" y="30" text-anchor="middle" font-size="10" fill="currentColor">USB-A</text>
+      <rect x="100" y="0" width="30" height="16" rx="2" class="port"/>
+      <text x="115" y="30" text-anchor="middle" font-size="10" class="mid-text">USB-A</text>
 
       <!-- USB-A used for FW console — highlighted -->
-      <rect x="145" y="0" width="30" height="16" rx="2" fill="#ffb400"/>
-      <text x="160" y="30" text-anchor="middle" font-size="10" fill="#ffb400" font-weight="600">USB-A</text>
+      <rect x="145" y="0" width="30" height="16" rx="2" class="amber-fill"/>
+      <text x="160" y="30" text-anchor="middle" font-size="10" class="amber-fill" font-weight="600">USB-A</text>
 
       <!-- USB-A (regular) -->
-      <rect x="190" y="0" width="30" height="16" rx="2" fill="currentColor" opacity="0.25"/>
-      <text x="205" y="30" text-anchor="middle" font-size="10" fill="currentColor">USB-A</text>
+      <rect x="190" y="0" width="30" height="16" rx="2" class="port"/>
+      <text x="205" y="30" text-anchor="middle" font-size="10" class="mid-text">USB-A</text>
     </g>
   </g>
 
   <!-- ===== Cisco 1210CE ===== -->
   <g transform="translate(480 270)">
-    <rect x="0" y="0" width="280" height="150" rx="10" fill="none" stroke="currentColor" stroke-width="2"/>
-    <text x="140" y="30" text-anchor="middle" font-size="15" font-weight="700" fill="currentColor">Cisco Secure Firewall 1210CE</text>
-    <text x="140" y="50" text-anchor="middle" font-size="12" fill="currentColor" opacity="0.75">FTD 7.6</text>
-    <text x="140" y="68" text-anchor="middle" font-size="11" fill="currentColor" opacity="0.6">FDM · SCC-ready</text>
+    <rect x="0" y="0" width="280" height="150" rx="10" class="ink" stroke-width="2"/>
+    <text x="140" y="30" text-anchor="middle" font-size="15" font-weight="700" class="ink-text">Cisco Secure Firewall 1210CE</text>
+    <text x="140" y="50" text-anchor="middle" font-size="12" class="mid-text">FTD 7.6</text>
+    <text x="140" y="68" text-anchor="middle" font-size="11" class="dim-text">FDM · SCC-ready</text>
 
     <!-- Port row -->
     <g transform="translate(20 100)">
       <!-- Eth 1/1 outside -->
-      <rect x="0" y="0" width="34" height="16" rx="2" fill="currentColor" opacity="0.25"/>
-      <text x="17" y="30" text-anchor="middle" font-size="10" fill="currentColor">Eth1/1</text>
+      <rect x="0" y="0" width="34" height="16" rx="2" class="port"/>
+      <text x="17" y="30" text-anchor="middle" font-size="10" class="mid-text">Eth1/1</text>
 
       <!-- Mgmt 1/1 -->
-      <rect x="55" y="0" width="34" height="16" rx="2" fill="currentColor" opacity="0.25"/>
-      <text x="72" y="30" text-anchor="middle" font-size="10" fill="currentColor">Mgmt</text>
+      <rect x="55" y="0" width="34" height="16" rx="2" class="port"/>
+      <text x="72" y="30" text-anchor="middle" font-size="10" class="mid-text">Mgmt</text>
 
       <!-- Inside ports 1/2 - 1/8 group -->
-      <rect x="105" y="0" width="70" height="16" rx="2" fill="currentColor" opacity="0.25"/>
-      <text x="140" y="30" text-anchor="middle" font-size="10" fill="currentColor">Eth1/2 – 1/8</text>
-      <text x="140" y="42" text-anchor="middle" font-size="9" fill="currentColor" opacity="0.6">inside VLAN1</text>
+      <rect x="105" y="0" width="70" height="16" rx="2" class="port"/>
+      <text x="140" y="30" text-anchor="middle" font-size="10" class="mid-text">Eth1/2 – 1/8</text>
+      <text x="140" y="42" text-anchor="middle" font-size="9" class="dim-text">inside VLAN1</text>
 
       <!-- Console USB-C — highlighted -->
-      <rect x="200" y="-2" width="20" height="20" rx="3" fill="#ffb400"/>
-      <text x="210" y="30" text-anchor="middle" font-size="10" fill="#ffb400" font-weight="600">USB-C</text>
-      <text x="210" y="42" text-anchor="middle" font-size="9" fill="#ffb400" opacity="0.85">CONSOLE</text>
+      <rect x="200" y="-2" width="20" height="20" rx="3" class="amber-fill"/>
+      <text x="210" y="30" text-anchor="middle" font-size="10" class="amber-fill" font-weight="600">USB-C</text>
+      <text x="210" y="42" text-anchor="middle" font-size="9" class="amber-fill">CONSOLE</text>
     </g>
   </g>
 
   <!-- ===== The star: USB-A → USB-C console cable ===== -->
-  <path d="M 300 435 Q 450 500 690 435" fill="none" stroke="#ffb400" stroke-width="3.5" stroke-linecap="round"/>
+  <path d="M 300 435 Q 450 500 690 435" fill="none" class="amber" stroke-width="3.5" stroke-linecap="round"/>
 
   <!-- Amber highlight callout -->
   <g transform="translate(280 470)">
-    <text x="170" y="14" text-anchor="middle" font-size="13" font-weight="700" fill="#ffb400">USB-A → USB-C data cable (console)</text>
-    <text x="170" y="34" text-anchor="middle" font-size="11" fill="#ffb400" opacity="0.9">Firewall enumerates on Pi as /dev/ttyACM0 (CDC-ACM)</text>
-    <text x="170" y="50" text-anchor="middle" font-size="11" fill="#ffb400" opacity="0.9">ser2net exposes it at telnet ConsolePi.local 9000</text>
+    <text x="170" y="14" text-anchor="middle" font-size="13" font-weight="700" class="amber-fill">USB-A → USB-C data cable (console)</text>
+    <text x="170" y="34" text-anchor="middle" font-size="11" class="amber-fill">Firewall enumerates on Pi as /dev/ttyACM0 (CDC-ACM)</text>
+    <text x="170" y="50" text-anchor="middle" font-size="11" class="amber-fill">ser2net exposes it at telnet ConsolePi.local 9000</text>
   </g>
 
   <!-- ===== Legend ===== -->
   <g transform="translate(30 530)">
-    <line x1="0" y1="0" x2="30" y2="0" stroke="currentColor" stroke-width="2"/>
-    <text x="40" y="4" font-size="11" fill="currentColor">Network path</text>
+    <line x1="0" y1="0" x2="30" y2="0" class="ink" stroke-width="2"/>
+    <text x="40" y="4" font-size="11" class="ink-text">Network path</text>
 
-    <line x1="180" y1="0" x2="210" y2="0" stroke="#ffb400" stroke-width="3.5" stroke-linecap="round"/>
-    <text x="220" y="4" font-size="11" fill="currentColor">Serial console path (highlighted)</text>
+    <line x1="180" y1="0" x2="210" y2="0" class="amber" stroke-width="3.5" stroke-linecap="round"/>
+    <text x="220" y="4" font-size="11" class="ink-text">Serial console path (highlighted)</text>
   </g>
 </svg>
