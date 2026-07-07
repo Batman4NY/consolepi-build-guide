@@ -1,12 +1,16 @@
-site_name: ConsolePi Build Guide
+site_name: 🦇 ConsolePi Build Guide
 site_description: A tested recipe for building a Raspberry Pi console server on Raspberry Pi OS 13 (Trixie), with support for both traditional RJ45 and modern USB-C Cisco console ports.
 site_url: https://batman4ny.github.io/consolepi-build-guide/
+site_author: Billy Garcia
+copyright: "© 2026 Billy Garcia (Batman4NY) — Apache-2.0"
 repo_url: https://github.com/Batman4NY/consolepi-build-guide
 repo_name: Batman4NY/consolepi-build-guide
 edit_uri: edit/main/docs/
 
 theme:
   name: material
+  logo: assets/logo.svg
+  favicon: assets/favicon.svg
   features:
     - navigation.instant
     - navigation.tabs
@@ -20,22 +24,27 @@ theme:
     - content.code.annotate
     - content.action.edit
   palette:
-    - media: "(prefers-color-scheme: light)"
-      scheme: default
-      primary: indigo
-      accent: indigo
-      toggle:
-        icon: material/brightness-7
-        name: Switch to dark mode
+    # Dark mode by default (Batman would approve)
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
-      primary: indigo
-      accent: indigo
+      primary: black
+      accent: amber
       toggle:
-        icon: material/brightness-4
+        icon: material/weather-sunny
         name: Switch to light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: black
+      accent: amber
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
   icon:
     repo: fontawesome/brands/github
+    logo: null
+
+extra_css:
+  - assets/custom.css
 
 markdown_extensions:
   - admonition
@@ -68,3 +77,9 @@ nav:
   - Access Methods: access-methods.md
   - Trixie Gotchas: trixie-gotchas.md
   - Troubleshooting: troubleshooting.md
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/Batman4NY
+      name: Batman4NY on GitHub

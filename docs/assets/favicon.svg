@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" aria-label="Batman4NY bat">
+  <!-- Solid amber circle background -->
+  <circle cx="50" cy="50" r="48" fill="#0b0d10"/>
+  <circle cx="50" cy="50" r="48" fill="none" stroke="#ffb400" stroke-width="2"/>
+  <!-- Bat silhouette centered inside -->
+  <g fill="#ffb400" transform="translate(10 30)">
+    <!-- Body -->
+    <path d="M40 6 L37 12 L40 14 L43 12 Z"/>
+    <!-- Ears -->
+    <path d="M38 8 L35 2 L39 6 Z"/>
+    <path d="M42 8 L45 2 L41 6 Z"/>
+    <!-- Left wing -->
+    <path d="M37 12 L28 10 L24 14 L18 11 L14 15 L8 12 L4 16 L0 14 L0 22 L6 24 L12 22 L18 25 L24 22 L30 26 L37 22 L40 24 L40 14 Z"/>
+    <!-- Right wing -->
+    <path d="M43 12 L52 10 L56 14 L62 11 L66 15 L72 12 L76 16 L80 14 L80 22 L74 24 L68 22 L62 25 L56 22 L50 26 L43 22 L40 24 L40 14 Z"/>
+  </g>
+</svg>

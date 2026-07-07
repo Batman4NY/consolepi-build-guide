@@ -1,0 +1,34 @@
+/* Batman-inspired accent tweaks over mkdocs-material's black + amber palette */
+
+/* Header logo: bat should render at readable size */
+.md-header__button.md-logo img,
+.md-header__button.md-logo svg {
+    height: 1.8rem;
+    width: auto;
+}
+
+/* Amber accent on links + admonition titles for that Bat-signal glow */
+[data-md-color-primary="black"] .md-typeset a {
+    color: #ffb400;
+}
+
+[data-md-color-primary="black"] .md-typeset a:hover {
+    color: #ffcd42;
+}
+
+/* Slightly warmer body text in dark mode for readability */
+[data-md-color-scheme="slate"] .md-typeset {
+    color: rgba(255, 255, 255, 0.90);
+}
+
+/* Header stays black even when scrolling */
+.md-header {
+    background-color: #0b0d10;
+}
+
+/* Footer subtle amber underline */
+.md-footer-copyright {
+    border-top: 2px solid #ffb400;
+    padding-top: 0.5rem;
+    margin-top: 0.5rem;
+}
