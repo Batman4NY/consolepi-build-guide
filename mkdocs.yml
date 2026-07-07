@@ -2,7 +2,7 @@ site_name: 🦇 ConsolePi Build Guide
 site_description: A tested recipe for building a Raspberry Pi console server on Raspberry Pi OS 13 (Trixie), with support for both traditional RJ45 and modern USB-C Cisco console ports.
 site_url: https://batman4ny.github.io/consolepi-build-guide/
 site_author: Billy Garcia
-copyright: "© 2026 Billy Garcia (Batman4NY) — Apache-2.0"
+copyright: "© 2026 Billy Garcia (Batman4NY) — Apache-2.0. Based on <a href='https://github.com/Pack3tL0ss/ConsolePi'>ConsolePi</a> by Wade Wells."
 repo_url: https://github.com/Batman4NY/consolepi-build-guide
 repo_name: Batman4NY/consolepi-build-guide
 edit_uri: edit/main/docs/

@@ -62,3 +62,21 @@ USB-C console port on a Cisco 1200/3100/4200 or Catalyst 9000, jump to
 
 If something isn't working, **[Troubleshooting](troubleshooting.md)** is
 organized by symptom.
+
+## Acknowledgments
+
+This guide stands on the shoulders of the excellent
+[**ConsolePi**](https://github.com/Pack3tL0ss/ConsolePi) project by
+[Wade Wells (Pack3tL0ss)](https://github.com/Pack3tL0ss). All the heavy
+lifting — the installer, ser2net orchestration, mDNS auto-discovery,
+`consolepi-menu`, the REST API — is his work.
+
+This guide is a build recipe layered on top of ConsolePi, focused on:
+
+- What actually works on Raspberry Pi OS 13 (Trixie)
+- USB-C console connections to modern Cisco gear
+- Silent-install flags for reproducibility
+
+If you find ConsolePi useful, [star the upstream
+repo](https://github.com/Pack3tL0ss/ConsolePi) and consider contributing
+to it directly — that's where the core work lives.

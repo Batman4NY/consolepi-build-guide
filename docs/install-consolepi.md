@@ -7,6 +7,15 @@ script from GitHub and runs it. It supports both **interactive** and
 For a lab / homelab setup with sensible defaults, **silent mode** is
 much faster and easier to reproduce.
 
+!!! info "Upstream source"
+    The installer script is fetched directly from the
+    [**Pack3tL0ss/ConsolePi**](https://github.com/Pack3tL0ss/ConsolePi)
+    repository on GitHub — that's the canonical upstream project by
+    Wade Wells. If you're curious what the installer does before
+    running it (recommended for any curl-into-bash install), the source
+    is at
+    [`installer/install.sh`](https://github.com/Pack3tL0ss/ConsolePi/blob/master/installer/install.sh).
+
 ## The working silent-install command
 
 Run this as the `pi` user (the installer will prompt for sudo internally):
