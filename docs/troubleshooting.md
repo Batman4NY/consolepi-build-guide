@@ -151,5 +151,4 @@ Ordered by usefulness:
 1. Journal for the specific service: `sudo journalctl -u <service> --since '10 min ago'`
 2. Install log (if still present): `/tmp/consolepi-install.log`
 3. `/var/log/ConsolePi/*` — ConsolePi-specific logs
-4. Upstream project: [github.com/Pack3tL0ss/ConsolePi/issues](https://github.com/Pack3tL0ss/ConsolePi/issues)
-5. Discussion on [ArubaOS-CX Networkers Slack](https://slack.arubanetworks.com/) (ConsolePi's maintainer is active there)
+4. Upstream project issues + discussions: [github.com/Pack3tL0ss/ConsolePi](https://github.com/Pack3tL0ss/ConsolePi/issues)
