@@ -1,5 +1,13 @@
 # ConsolePi Build Guide
 
+!!! warning "Personal project — not Cisco-official"
+    This build guide is a home lab recipe layered on top of the open-source
+    [ConsolePi](https://github.com/Pack3tL0ss/ConsolePi) project by
+    [Wade Wells](https://github.com/Pack3tL0ss). Built by a Cisco employee on
+    their own time using publicly documented console interfaces.
+    **Not affiliated with, endorsed by, sponsored by, or representing Cisco
+    Systems, Inc.**
+
 A tested, opinionated recipe for turning a Raspberry Pi into a
 network-accessible serial console server, running
 [ConsolePi](https://github.com/Pack3tL0ss/ConsolePi) on Raspberry Pi OS 13
