@@ -66,6 +66,7 @@ plugins:
   - search
 
 nav:
+  - "↩ Back to Batman4NY": https://batman4ny.github.io/
   - Home: index.md
   - Bill of Materials: bill-of-materials.md
   - Flash Raspberry Pi OS: flash-raspios.md
